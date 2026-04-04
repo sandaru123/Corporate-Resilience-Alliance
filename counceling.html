@@ -1,0 +1,1331 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corporate Resilience Alliance | Sri Lanka</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              teal: "#1A535C",
+              green: "#4ECDC4",
+              slate: "#F7FFF7",
+              charcoal: "#2F3E46",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Custom Styles for things Tailwind is too verbose for */
+      .glass-nav {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+      }
+      .hero-bg {
+        background-image:
+          linear-gradient(rgba(26, 83, 92, 0.85), rgba(47, 62, 70, 0.85)),
+          url("https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body class="font-sans text-charcoal antialiased bg-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full z-50 glass-nav shadow-sm transition-all duration-300"
+      id="navbar"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo Area -->
+          <a
+            href="#home"
+            class="flex-shrink-0 flex items-center gap-2 md:gap-3"
+          >
+            <img
+              src="https://raw.githubusercontent.com/sandaru123/Corporate-Resilience-Alliance/refs/heads/main/logo_trn.png"
+              alt="Corporate Resilience Alliance Logo"
+              class="h-12 md:h-16 w-auto object-contain"
+            />
+            <img
+              src="https://raw.githubusercontent.com/sandaru123/Corporate-Resilience-Alliance/refs/heads/main/logo_name.png"
+              alt="Corporate Resilience Alliance Text"
+              class="h-8 md:h-10 w-auto object-contain"
+            />
+          </a>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#why-us"
+              class="text-sm font-medium text-charcoal hover:text-green transition-colors"
+              >Why Us</a
+            >
+            <a
+              href="#services"
+              class="text-sm font-medium text-charcoal hover:text-green transition-colors"
+              >Our Services</a
+            >
+            <a
+              href="#process"
+              class="text-sm font-medium text-charcoal hover:text-green transition-colors"
+              >Process</a
+            >
+            <a
+              href="#about"
+              class="text-sm font-medium text-charcoal hover:text-green transition-colors"
+              >About</a
+            >
+            <a
+              href="#team"
+              class="text-sm font-medium text-charcoal hover:text-green transition-colors"
+              >Our Team</a
+            >
+            <a
+              href="#impact"
+              class="text-sm font-medium text-charcoal hover:text-green transition-colors"
+              >Our Impact</a
+            >
+            <a
+              href="#contact"
+              class="bg-teal text-white px-5 py-2.5 rounded-md text-sm font-medium hover:bg-opacity-90 shadow-lg shadow-teal/30 transition-all"
+              >Get a Quote</a
+            >
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-btn"
+              class="text-charcoal hover:text-teal focus:outline-none p-2"
+            >
+              <i class="ph ph-list text-3xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full"
+      >
+        <div class="px-4 pt-2 pb-6 space-y-1">
+          <a
+            href="#why-us"
+            class="block px-3 py-3 text-base font-medium text-charcoal hover:bg-slate hover:text-teal rounded-md"
+            >Why Us</a
+          >
+          <a
+            href="#services"
+            class="block px-3 py-3 text-base font-medium text-charcoal hover:bg-slate hover:text-teal rounded-md"
+            >Our Services</a
+          >
+          <a
+            href="#process"
+            class="block px-3 py-3 text-base font-medium text-charcoal hover:bg-slate hover:text-teal rounded-md"
+            >Process</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-3 text-base font-medium text-charcoal hover:bg-slate hover:text-teal rounded-md"
+            >About</a
+          >
+          <a
+            href="#team"
+            class="block px-3 py-3 text-base font-medium text-charcoal hover:bg-slate hover:text-teal rounded-md"
+            >Our Team</a
+          >
+          <a
+            href="#impact"
+            class="block px-3 py-3 text-base font-medium text-charcoal hover:bg-slate hover:text-teal rounded-md"
+            >Our Impact</a
+          >
+          <a
+            href="#contact"
+            class="block w-full text-center mt-4 bg-teal text-white px-5 py-3 rounded-md text-base font-medium hover:bg-opacity-90 transition-all"
+            >Get a Quote</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-[90vh] flex items-center pt-20">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center md:text-left"
+      >
+        <div class="max-w-3xl">
+          <span
+            data-aos="fade-up"
+            class="inline-block py-1 px-3 rounded-full bg-green/20 text-green border border-green/30 text-sm font-semibold mb-6 tracking-wide backdrop-blur-sm"
+          >
+            Premium Corporate Counseling
+          </span>
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="text-4xl md:text-6xl font-serif font-bold text-white leading-tight mb-4"
+          >
+            Healing Hearts,<br />Building Resilience at Work.
+          </h1>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="space-y-3 mb-10 text-slate/90 max-w-2xl text-lg md:text-xl"
+          >
+            <p class="font-medium">
+              හදවත් සුවපත් කරමු, රැකියා ස්ථානයේ ඔරොත්තු දීමේ ශක්තිය ගොඩනගමු.
+            </p>
+            <p class="font-medium">
+              இதயங்களைக் குணப்படுத்துதல், பணியிடத்தில் மீளெழுச்சித் திறனை
+              உருவாக்குதல்.
+            </p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+          >
+            <a
+              href="#contact"
+              class="bg-green text-teal px-8 py-4 rounded-md text-base font-bold hover:bg-white hover:text-teal shadow-lg transition-all flex items-center justify-center gap-2"
+            >
+              Book a Consultation
+              <i class="ph ph-arrow-right font-bold"></i>
+            </a>
+            <a
+              href="#services"
+              class="bg-transparent text-white border-2 border-white/30 px-8 py-4 rounded-md text-base font-medium hover:bg-white/10 transition-all text-center"
+            >
+              View Our Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us (The Business Case) -->
+    <section id="why-us" class="py-24 bg-slate">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-teal mb-4">
+            Why Mental Health Matters for the Bottom Line
+          </h2>
+          <p class="text-charcoal/70 text-lg">
+            Investing in corporate counseling isn't just about wellbeing; it's a
+            strategic business decision that directly impacts performance and
+            retention.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <!-- Benefit 1 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all group"
+          >
+            <div
+              class="w-14 h-14 bg-teal/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal transition-colors"
+            >
+              <i
+                class="ph ph-trend-down text-3xl text-teal group-hover:text-white transition-colors"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-teal mb-3">Reduce Absenteeism</h3>
+            <p class="text-charcoal/70">
+              Proactive mental health support keeps your team present. We help
+              mitigate burnout before it leads to prolonged leave or chronic
+              absenteeism.
+            </p>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all group"
+          >
+            <div
+              class="w-14 h-14 bg-green/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green transition-colors"
+            >
+              <i
+                class="ph ph-trend-up text-3xl text-teal group-hover:text-white transition-colors"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-teal mb-3">
+              Increase Productivity
+            </h3>
+            <p class="text-charcoal/70">
+              Healthy minds lead to sharper focus, better decision-making, and
+              increased creative problem-solving capabilities across all
+              departments.
+            </p>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all group"
+          >
+            <div
+              class="w-14 h-14 bg-teal/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal transition-colors"
+            >
+              <i
+                class="ph ph-shield-check text-3xl text-teal group-hover:text-white transition-colors"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold text-teal mb-3">Protect Top Talent</h3>
+            <p class="text-charcoal/70">
+              Build a culture that employees never want to leave. Companies that
+              offer comprehensive EAPs see significantly higher retention rates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-teal mb-4">
+            Corporate Mental Health & Employee Assistance
+          </h2>
+          <p class="text-charcoal/70 text-lg">
+            We offer specialized services to foster a mentally healthy and
+            productive workplace environment. Our goal is to reduce stigma and
+            provide accessible support to your team.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Service Card 1 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="flex gap-6 p-8 border border-gray-100 rounded-xl hover:border-green/50 hover:shadow-lg transition-all bg-white group cursor-default"
+          >
+            <div class="flex-shrink-0 mt-1">
+              <i class="ph ph-megaphone text-4xl text-green"></i>
+            </div>
+            <div>
+              <h3
+                class="text-2xl font-bold text-teal mb-3 group-hover:text-green transition-colors"
+              >
+                Employee Awareness Programs
+              </h3>
+              <p class="text-charcoal/70 leading-relaxed">
+                We conduct targeted awareness sessions to educate your workforce
+                and address the social stigma associated with seeking
+                counseling, creating a more open and supportive culture.
+              </p>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="flex gap-6 p-8 border border-gray-100 rounded-xl hover:border-green/50 hover:shadow-lg transition-all bg-white group cursor-default"
+          >
+            <div class="flex-shrink-0 mt-1">
+              <i class="ph ph-buildings text-4xl text-green"></i>
+            </div>
+            <div>
+              <h3
+                class="text-2xl font-bold text-teal mb-3 group-hover:text-green transition-colors"
+              >
+                On-Site Counselor Placement
+              </h3>
+              <p class="text-charcoal/70 leading-relaxed">
+                To provide convenient access to professional help, we can
+                station a counselor at your location according to your specific
+                requirements (e.g., once a month or twice a month).
+              </p>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            class="flex gap-6 p-8 border border-gray-100 rounded-xl hover:border-green/50 hover:shadow-lg transition-all bg-white group cursor-default"
+          >
+            <div class="flex-shrink-0 mt-1">
+              <i class="ph ph-desktop text-4xl text-green"></i>
+            </div>
+            <div>
+              <h3
+                class="text-2xl font-bold text-teal mb-3 group-hover:text-green transition-colors"
+              >
+                Virtual Counseling Services
+              </h3>
+              <p class="text-charcoal/70 leading-relaxed">
+                Confidential, personalized tele-health sessions for employees
+                navigating anxiety, stress, work-life balance, or personal
+                challenges affecting their work.
+              </p>
+            </div>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="400"
+            class="flex gap-6 p-8 border border-gray-100 rounded-xl hover:border-green/50 hover:shadow-lg transition-all bg-white group cursor-default"
+          >
+            <div class="flex-shrink-0 mt-1">
+              <i class="ph ph-chart-line-up text-4xl text-green"></i>
+            </div>
+            <div>
+              <h3
+                class="text-2xl font-bold text-teal mb-3 group-hover:text-green transition-colors"
+              >
+                Executive Support & Workshops
+              </h3>
+              <p class="text-charcoal/70 leading-relaxed">
+                Specialized, high-level support for leadership and HR, alongside
+                interactive group sessions designed to build a collective
+                culture of emotional intelligence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Pillar -->
+    <section class="py-20 bg-teal relative overflow-hidden">
+      <!-- Abstract background pattern -->
+      <div class="absolute top-0 right-0 -mr-20 -mt-20 opacity-10">
+        <i
+          class="ph ph-shield-check text-[300px] text-white"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+        ></i>
+      </div>
+
+      <div
+        class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
+        data-aos="zoom-in"
+      >
+        <div
+          class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green text-teal mb-6"
+        >
+          <i class="ph ph-lock-key text-3xl font-bold"></i>
+        </div>
+        <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-6">
+          Complete Confidentiality. Guaranteed.
+        </h2>
+        <p class="text-lg text-slate/90 leading-relaxed font-light">
+          We understand that trust is the foundation of effective counseling.
+          Our services operate behind a strict clinical firewall. Employee
+          personal data and session details are <strong>never</strong> shared
+          with management or HR. We provide organizations with only anonymized,
+          aggregated usage reports to demonstrate ROI while protecting every
+          individual's right to privacy.
+        </p>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-24 bg-slate">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-teal mb-4">
+            Our Simple Integration Process
+          </h2>
+          <p class="text-charcoal/70 text-lg">
+            Implementing mental health support shouldn't be stressful. We handle
+            the heavy lifting.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+          <!-- Connecting Line for Desktop -->
+          <div
+            class="hidden md:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-teal/20 -z-1"
+            data-aos="fade-in"
+            data-aos-delay="500"
+          ></div>
+
+          <!-- Step 1 -->
+          <div
+            class="text-center relative z-10"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
+            <div
+              class="w-24 h-24 mx-auto bg-white border-4 border-slate rounded-full flex items-center justify-center shadow-lg mb-6 hover:scale-105 transition-transform"
+            >
+              <span class="text-2xl font-bold text-teal">01</span>
+            </div>
+            <h3 class="text-xl font-bold text-teal mb-2">
+              Initial Consultation
+            </h3>
+            <p class="text-sm text-charcoal/70">
+              We assess your company's specific culture, size, and pain points.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div
+            class="text-center relative z-10"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-24 h-24 mx-auto bg-teal border-4 border-slate rounded-full flex items-center justify-center shadow-lg mb-6 hover:scale-105 transition-transform"
+            >
+              <span class="text-2xl font-bold text-white">02</span>
+            </div>
+            <h3 class="text-xl font-bold text-teal mb-2">Custom Strategy</h3>
+            <p class="text-sm text-charcoal/70">
+              We design a service package and SLA that fits your exact budget
+              and needs.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div
+            class="text-center relative z-10"
+            data-aos="fade-right"
+            data-aos-delay="300"
+          >
+            <div
+              class="w-24 h-24 mx-auto bg-white border-4 border-slate rounded-full flex items-center justify-center shadow-lg mb-6 hover:scale-105 transition-transform"
+            >
+              <span class="text-2xl font-bold text-teal">03</span>
+            </div>
+            <h3 class="text-xl font-bold text-teal mb-2">Active Support</h3>
+            <p class="text-sm text-charcoal/70">
+              Launch campaign for employees. Tele-health and on-site sessions
+              begin seamlessly.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div
+            class="text-center relative z-10"
+            data-aos="fade-right"
+            data-aos-delay="400"
+          >
+            <div
+              class="w-24 h-24 mx-auto bg-white border-4 border-slate rounded-full flex items-center justify-center shadow-lg mb-6 hover:scale-105 transition-transform"
+            >
+              <span class="text-2xl font-bold text-teal">04</span>
+            </div>
+            <h3 class="text-xl font-bold text-teal mb-2">Impact Review</h3>
+            <p class="text-sm text-charcoal/70">
+              Quarterly reviews with anonymized data to measure engagement and
+              ROI.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="w-full lg:w-1/2" data-aos="fade-right">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Professional Counseling Team"
+              class="rounded-2xl shadow-xl w-full object-cover h-[500px]"
+            />
+          </div>
+          <div class="w-full lg:w-1/2" data-aos="fade-left">
+            <div class="mb-8">
+              <h2
+                class="text-3xl font-serif font-bold text-teal mb-4 flex items-center gap-3"
+              >
+                <i class="ph ph-eye text-green"></i> Vision Statement
+              </h2>
+              <p
+                class="text-charcoal/80 text-lg italic leading-relaxed border-l-4 border-green pl-4"
+              >
+                "To cultivate a Sri Lankan corporate landscape where resilience,
+                wellbeing, and healing are fundamental values, empowering
+                organizations and their people to thrive in a dynamically
+                changing world."
+              </p>
+            </div>
+
+            <div class="mb-10">
+              <h2
+                class="text-3xl font-serif font-bold text-teal mb-4 flex items-center gap-3"
+              >
+                <i class="ph ph-target text-green"></i> Mission Statement
+              </h2>
+              <p class="text-charcoal/80 text-lg leading-relaxed">
+                To serve as a unifying alliance providing a framework of
+                psychological support, professional training, and advocacy to
+                heal hearts, foster mental health, and build lasting corporate
+                resilience across all sectors in Sri Lanka.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <div
+                class="flex items-center gap-4 bg-slate p-4 rounded-lg hover:shadow-md transition-shadow"
+              >
+                <i class="ph ph-certificate text-3xl text-green"></i>
+                <div>
+                  <h4 class="font-bold text-teal">
+                    SLMC Registered Professionals
+                  </h4>
+                  <p class="text-sm text-charcoal/70">
+                    Our clinicians meet the highest national medical standards.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-4 bg-slate p-4 rounded-lg hover:shadow-md transition-shadow"
+              >
+                <i class="ph ph-book-open text-3xl text-green"></i>
+                <div>
+                  <h4 class="font-bold text-teal">Evidence-Based Practices</h4>
+                  <p class="text-sm text-charcoal/70">
+                    Utilizing proven frameworks like CBT and organizational
+                    psychology.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-24 bg-slate border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-teal mb-4">
+            Our Clinical Team
+          </h2>
+          <p class="text-charcoal/70 text-lg">
+            Our experts bring decades of combined experience in clinical
+            psychology, organizational behavior, and corporate wellness.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Team Member 1: J N Thilakaratne -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group flex flex-col h-full"
+          >
+            <div class="overflow-hidden relative h-64 flex-shrink-0">
+              <img
+                src="https://images.unsplash.com/photo-1612349317150-e410f624c4e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="J N Thilakaratne"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-teal/10 group-hover:bg-transparent transition-colors duration-300"
+              ></div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow relative bg-white z-10">
+              <h3 class="text-lg font-bold text-teal mb-1">
+                J.N. Thilakaratne
+              </h3>
+              <p
+                class="text-green font-semibold text-xs mb-3 flex items-center gap-1.5 leading-tight"
+              >
+                <i class="ph ph-stethoscope text-base flex-shrink-0"></i> Trauma
+                Therapist & Corporate Stress Consultant
+              </p>
+
+              <div
+                class="text-charcoal/60 text-xs mb-4 flex flex-col gap-1.5 border-t border-gray-100 pt-3"
+              >
+                <span class="flex items-start gap-1.5"
+                  ><i
+                    class="ph ph-graduation-cap text-base text-teal/70 flex-shrink-0"
+                  ></i>
+                  BSc (Regent Intl NZ), Dip. Psychology</span
+                >
+                <span class="flex items-start gap-1.5"
+                  ><i
+                    class="ph ph-certificate text-base text-teal/70 flex-shrink-0"
+                  ></i>
+                  Former President SLNAC</span
+                >
+              </div>
+
+              <p
+                class="text-charcoal/80 text-sm border-t border-gray-100 pt-4 mt-auto leading-relaxed"
+              >
+                Dedicated Mental Health Practitioner with 12+ years of global
+                experience across Sri Lanka and NZ. Specializes in complex
+                trauma (EMDR), relationship dynamics (Imago Therapy), and
+                corporate stress management.
+              </p>
+            </div>
+          </div>
+
+          <!-- Team Member 2: Venuri Fernando -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group flex flex-col h-full"
+          >
+            <div class="overflow-hidden relative h-64 flex-shrink-0">
+              <img
+                src="https://images.unsplash.com/photo-1594824432258-f2b704fbce97?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Venuri Fernando"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-teal/10 group-hover:bg-transparent transition-colors duration-300"
+              ></div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow relative bg-white z-10">
+              <h3 class="text-lg font-bold text-teal mb-1">Venuri Fernando</h3>
+              <p
+                class="text-green font-semibold text-xs mb-3 flex items-center gap-1.5 leading-tight"
+              >
+                <i class="ph ph-first-aid text-base flex-shrink-0"></i> Licensed
+                Psychological Counsellor & Therapist
+              </p>
+
+              <div
+                class="text-charcoal/60 text-xs mb-4 flex flex-col gap-1.5 border-t border-gray-100 pt-3"
+              >
+                <span class="flex items-start gap-1.5"
+                  ><i
+                    class="ph ph-graduation-cap text-base text-teal/70 flex-shrink-0"
+                  ></i>
+                  MSc Applied Psych, BSc, Dip. Psych</span
+                >
+                <span class="flex items-start gap-1.5"
+                  ><i
+                    class="ph ph-certificate text-base text-teal/70 flex-shrink-0"
+                  ></i>
+                  Member SLNAC & GICP</span
+                >
+              </div>
+
+              <p
+                class="text-charcoal/80 text-sm border-t border-gray-100 pt-4 mt-auto leading-relaxed"
+              >
+                Highly qualified professional dedicated to providing
+                compassionate care. Deeply specializes in Adolescent
+                Counselling, offering a safe and supportive environment for
+                individuals navigating pivotal life transitions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Team Member 3: Kusumanjalee Thilakarathna -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group flex flex-col h-full"
+          >
+            <div class="overflow-hidden relative h-64 flex-shrink-0">
+              <img
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Kusumanjalee Thilakarathna"
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-teal/10 group-hover:bg-transparent transition-colors duration-300"
+              ></div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow relative bg-white z-10">
+              <h3 class="text-lg font-bold text-teal mb-1">
+                Kusumanjalee Thilakarathna
+              </h3>
+              <p
+                class="text-green font-semibold text-xs mb-3 flex items-center gap-1.5 leading-tight"
+              >
+                <i class="ph ph-users text-base flex-shrink-0"></i> Qualified
+                Counsellor
+              </p>
+
+              <div
+                class="text-charcoal/60 text-xs mb-4 flex flex-col gap-1.5 border-t border-gray-100 pt-3"
+              >
+                <span class="flex items-start gap-1.5"
+                  ><i
+                    class="ph ph-graduation-cap text-base text-teal/70 flex-shrink-0"
+                  ></i>
+                  MA Buddhist Counselling, Master of Counselling</span
+                >
+                <span class="flex items-start gap-1.5"
+                  ><i
+                    class="ph ph-graduation-cap text-base text-teal/70 flex-shrink-0"
+                  ></i>
+                  BSc, Dip. Counselling Psychology</span
+                >
+              </div>
+
+              <p
+                class="text-charcoal/80 text-sm border-t border-gray-100 pt-4 mt-auto leading-relaxed"
+              >
+                Expert in psychosocial support and modern counseling
+                methodologies. Provides dedicated therapeutic services perfectly
+                tailored for individuals, couples, and families to foster
+                emotional resilience.
+              </p>
+            </div>
+          </div>
+
+          <!-- Team Member 4: Iroshi Sewwandi Siriwardhana -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="400"
+            class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group flex flex-col h-full"
+          >
+            <div class="overflow-hidden relative h-64 flex-shrink-0">
+              <img
+                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Iroshi Sewwandi Siriwardhana"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-teal/10 group-hover:bg-transparent transition-colors duration-300"
+              ></div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow relative bg-white z-10">
+              <h3 class="text-lg font-bold text-teal mb-1 leading-tight">
+                Dr. Iroshi Sewwandi Siriwardhana
+              </h3>
+              <p
+                class="text-green font-semibold text-xs mb-3 mt-1 flex items-center gap-1.5 leading-tight"
+              >
+                <i class="ph ph-briefcase text-base flex-shrink-0"></i>
+                Distinguished Academic & Counsellor
+              </p>
+
+              <div
+                class="text-charcoal/60 text-xs mb-4 flex flex-col gap-1.5 border-t border-gray-100 pt-3"
+              >
+                <span class="flex items-start gap-1.5"
+                  ><i
+                    class="ph ph-graduation-cap text-base text-teal/70 flex-shrink-0"
+                  ></i>
+                  PhD (Human Studies), MEd, BEd</span
+                >
+                <span class="flex items-start gap-1.5"
+                  ><i
+                    class="ph ph-certificate text-base text-teal/70 flex-shrink-0"
+                  ></i>
+                  Dip. in Counselling & Psych</span
+                >
+              </div>
+
+              <p
+                class="text-charcoal/80 text-sm border-t border-gray-100 pt-4 mt-auto leading-relaxed"
+              >
+                Blends distinguished academic scholarship with counseling
+                psychology. Dedicated to supporting individuals, couples, and
+                families through comprehensive, evidence-based mental health
+                care.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conducted Sessions / Impact Section -->
+    <section
+      id="impact"
+      class="py-24 bg-white border-t border-gray-100 overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-teal mb-4">
+            Our Corporate Impact
+          </h2>
+          <p class="text-charcoal/70 text-lg">
+            A glimpse into our recent workshops, awareness programs, and
+            training sessions conducted for leading organizations across Sri
+            Lanka.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <!-- Session Card 1 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            class="bg-slate rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-teal/10 group flex flex-col h-full"
+          >
+            <div class="overflow-hidden relative h-56 flex-shrink-0">
+              <img
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Corporate Workshop Session"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute top-4 left-4 bg-white/90 backdrop-blur text-teal text-xs font-bold px-3 py-1.5 rounded-full shadow-sm"
+              >
+                Employee Awareness
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow relative z-10">
+              <h3
+                class="text-xl font-bold text-teal mb-2 group-hover:text-green transition-colors"
+              >
+                Wellbeing & Burnout Seminar
+              </h3>
+              <p
+                class="text-charcoal/50 text-sm font-semibold mb-4 flex items-center gap-1.5"
+              >
+                <i class="ph ph-buildings"></i> Leading Technology Firm, Colombo
+              </p>
+              <p
+                class="text-charcoal/80 text-sm leading-relaxed mt-auto border-t border-teal/10 pt-4"
+              >
+                A full-day interactive workshop focused on identifying early
+                signs of burnout, establishing healthy work-life boundaries, and
+                creating peer support systems within high-pressure tech teams.
+              </p>
+            </div>
+          </div>
+
+          <!-- Session Card 2 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="bg-slate rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-teal/10 group flex flex-col h-full"
+          >
+            <div class="overflow-hidden relative h-56 flex-shrink-0">
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Executive Coaching Session"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute top-4 left-4 bg-white/90 backdrop-blur text-teal text-xs font-bold px-3 py-1.5 rounded-full shadow-sm"
+              >
+                Executive Coaching
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow relative z-10">
+              <h3
+                class="text-xl font-bold text-teal mb-2 group-hover:text-green transition-colors"
+              >
+                Leadership Resilience Training
+              </h3>
+              <p
+                class="text-charcoal/50 text-sm font-semibold mb-4 flex items-center gap-1.5"
+              >
+                <i class="ph ph-buildings"></i> Top Apparel Manufacturer
+              </p>
+              <p
+                class="text-charcoal/80 text-sm leading-relaxed mt-auto border-t border-teal/10 pt-4"
+              >
+                Working directly with senior management to build emotional
+                intelligence and conflict resolution skills. The session
+                empowered leaders to foster psychologically safe environments on
+                the factory floor.
+              </p>
+            </div>
+          </div>
+
+          <!-- Session Card 3 -->
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            class="bg-slate rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-teal/10 group flex flex-col h-full"
+          >
+            <div class="overflow-hidden relative h-56 flex-shrink-0">
+              <img
+                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Crisis Intervention Group"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div
+                class="absolute top-4 left-4 bg-white/90 backdrop-blur text-teal text-xs font-bold px-3 py-1.5 rounded-full shadow-sm"
+              >
+                Crisis Intervention
+              </div>
+            </div>
+            <div class="p-6 flex flex-col flex-grow relative z-10">
+              <h3
+                class="text-xl font-bold text-teal mb-2 group-hover:text-green transition-colors"
+              >
+                Change Management Support
+              </h3>
+              <p
+                class="text-charcoal/50 text-sm font-semibold mb-4 flex items-center gap-1.5"
+              >
+                <i class="ph ph-buildings"></i> Financial Services Institution
+              </p>
+              <p
+                class="text-charcoal/80 text-sm leading-relaxed mt-auto border-t border-teal/10 pt-4"
+              >
+                Provided critical on-site counseling and group processing
+                sessions to support staff through a major organizational
+                restructuring, significantly reducing collective anxiety and
+                resistance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-24 bg-slate border-t border-gray-200 overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <!-- Contact Info -->
+          <div data-aos="fade-right">
+            <h2
+              class="text-3xl md:text-4xl font-serif font-bold text-teal mb-6"
+            >
+              Ready to Transform Your Workplace Culture?
+            </h2>
+            <p class="text-charcoal/70 mb-10 text-lg">
+              Connect with our partnership team today to discuss how we can
+              tailor a resilience and mental health strategy specifically for
+              your organization.
+            </p>
+
+            <div class="space-y-6">
+              <div
+                class="flex items-start gap-4 hover:-translate-y-1 transition-transform cursor-default"
+              >
+                <div
+                  class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0 text-teal"
+                >
+                  <i class="ph ph-envelope-simple text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-teal">Email Us</h4>
+                  <p class="text-charcoal/70 mt-1">
+                    partnerships@corporateresilience.lk
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-4 hover:-translate-y-1 transition-transform cursor-default"
+              >
+                <div
+                  class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0 text-teal"
+                >
+                  <i class="ph ph-phone text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-teal">Call Us</h4>
+                  <p class="text-charcoal/70 mt-1">
+                    +94 11 234 5678 (Mon-Fri, 9am-5pm)
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-4 hover:-translate-y-1 transition-transform cursor-default"
+              >
+                <div
+                  class="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0 text-teal"
+                >
+                  <i class="ph ph-map-pin text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-teal">Headquarters</h4>
+                  <p class="text-charcoal/70 mt-1">
+                    Moratuwa, Western Province<br />Sri Lanka
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form (UI only) -->
+          <div
+            data-aos="fade-left"
+            class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100"
+          >
+            <h3 class="text-2xl font-bold text-teal mb-6">
+              Request a Proposal
+            </h3>
+            <form id="contactForm" class="space-y-5">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-charcoal mb-1"
+                    >Your Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-teal focus:border-teal outline-none transition-all"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="company"
+                    class="block text-sm font-medium text-charcoal mb-1"
+                    >Company Name</label
+                  >
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    required
+                    class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-teal focus:border-teal outline-none transition-all"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-charcoal mb-1"
+                    >Work Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-teal focus:border-teal outline-none transition-all"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="employees"
+                    class="block text-sm font-medium text-charcoal mb-1"
+                    >Number of Employees</label
+                  >
+                  <select
+                    id="employees"
+                    name="employees"
+                    required
+                    class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-teal focus:border-teal outline-none transition-all bg-white"
+                  >
+                    <option value="" disabled selected>
+                      Select employee count
+                    </option>
+                    <option value="1-50">1-50</option>
+                    <option value="51-200">51-200</option>
+                    <option value="201-500">201-500</option>
+                    <option value="500+">500+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label
+                  for="interest"
+                  class="block text-sm font-medium text-charcoal mb-1"
+                  >Primary Interest</label
+                >
+                <select
+                  id="interest"
+                  name="interest"
+                  required
+                  class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-teal focus:border-teal outline-none transition-all bg-white"
+                >
+                  <option value="" disabled selected>
+                    Select primary interest
+                  </option>
+                  <option value="Employee Assistance Program (EAP)">
+                    Employee Assistance Program (EAP)
+                  </option>
+                  <option value="Executive Coaching">Executive Coaching</option>
+                  <option value="Workshops & Training">
+                    Workshops & Training
+                  </option>
+                  <option value="General Inquiry">General Inquiry</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-charcoal mb-1"
+                  >Additional Details (Optional)</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-teal focus:border-teal outline-none transition-all resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                id="submitBtn"
+                class="w-full bg-teal text-white font-bold py-4 rounded-md hover:bg-opacity-90 shadow-lg shadow-teal/20 transition-all flex justify-center items-center gap-2"
+              >
+                Submit Inquiry <i class="ph ph-paper-plane-tilt"></i>
+              </button>
+              <p
+                id="formSuccess"
+                class="text-green-600 font-medium text-center mt-3 hidden"
+              >
+                Thank you! Your inquiry has been received. Our team will contact
+                you shortly.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal pt-16 pb-8 border-t border-teal/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <!-- Logo & Copyright -->
+          <div class="flex items-center gap-3">
+            <i class="ph ph-shield-check text-3xl text-green"></i>
+            <div>
+              <span class="font-serif font-bold text-lg text-white"
+                >Corporate Resilience Alliance</span
+              >
+              <p class="text-slate/50 text-xs mt-1">
+                © 2026. All rights reserved.
+              </p>
+            </div>
+          </div>
+
+          <!-- Socials/Links -->
+          <div class="flex gap-6">
+            <a href="#" class="text-slate/70 hover:text-green transition-colors"
+              ><i class="ph ph-linkedin-logo text-2xl"></i
+            ></a>
+            <a href="#" class="text-slate/70 hover:text-green transition-colors"
+              ><i class="ph ph-facebook-logo text-2xl"></i
+            ></a>
+            <a href="#" class="text-slate/70 hover:text-green transition-colors"
+              ><i class="ph ph-twitter-logo text-2xl"></i
+            ></a>
+          </div>
+        </div>
+        <div
+          class="mt-8 pt-8 border-t border-white/10 text-center text-sm text-slate/40"
+        >
+          <p>
+            Confidentiality is strictly maintained in accordance with SLMC
+            guidelines and standard psychological ethics.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Interactive Scripts -->
+    <script>
+      // Initialize AOS animations
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+        easing: "ease-out-cubic",
+      });
+
+      // Mobile Menu Toggle
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      const mobileLinks = menu.querySelectorAll("a");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu on link click
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+        });
+      });
+
+      // Navbar Scroll Effect
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 20) {
+          navbar.classList.add("shadow-md");
+          navbar.classList.replace("py-2", "py-0"); // subtle shrink
+        } else {
+          navbar.classList.remove("shadow-md");
+        }
+      });
+
+      // Google Apps Script Form Submission
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwoOZ8jjNbPYaNRDdv_UVHKfD39j5s6VKqN77C7P0CRRiWsRwl3Z4Q_5YJ4LKK63IcGAQ/exec";
+      const form = document.getElementById("contactForm");
+      const submitBtn = document.getElementById("submitBtn");
+      const successMsg = document.getElementById("formSuccess");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Visual feedback for the user
+        submitBtn.disabled = true;
+        submitBtn.innerHTML =
+          "Sending... <i class='ph ph-spinner animate-spin'></i>";
+
+        fetch(scriptURL, {
+          method: "POST",
+          body: new FormData(form),
+        })
+          .then((response) => {
+            // Show success message and hide form/button
+            successMsg.classList.remove("hidden");
+            submitBtn.classList.add("hidden");
+            form.reset();
+          })
+          .catch((error) => {
+            console.error("Error!", error.message);
+            alert("Something went wrong. Please try again.");
+            submitBtn.disabled = false;
+            submitBtn.innerHTML =
+              "Submit Inquiry <i class='ph ph-paper-plane-tilt'></i>";
+          });
+      });
+    </script>
+  </body>
+</html>
